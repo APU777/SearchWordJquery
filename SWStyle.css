@@ -1,0 +1,138 @@
+#_Clear{
+    font-size: 30px;
+}
+#basicText {
+
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-family: monospace;
+    font-size: 30px;
+}
+#divText {
+    border-radius: 25px;
+    border: 2px solid;
+    background-color: #FFFAE3;
+    padding: 20px;
+}
+:root {
+    --colorPulse: #DC5F89;
+}
+
+.labelAlign{
+    display: block;
+    text-align: center;
+}
+.fontSize{
+    font-size: 1500%;
+}
+.Animation{
+    vertical-align: text-bottom;
+    opacity: 0;
+    -webkit-animation: spinner-grow 20.75s linear infinite;
+    animation: spinner-grow 20.75s linear infinite;
+}
+
+.radio-label {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3%;
+    font-size: 30px;
+}
+.radio-input {
+    display: inline-block;
+    vertical-align: top;
+}
+fieldset {
+    text-align: center;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 3%;
+    height: 2em;
+}
+
+.statementYellow{
+    background: #FEC018;
+}
+.statementRed{
+    background: #DA153B;
+}
+.statementBlue{
+    background: #107BFD;
+}
+.statementGreen{
+    background: #24A647;
+}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}
+
+
+.colorYellow{
+    background-color: #FEC018 !important;
+    box-shadow: 0 0 0 #FFC56D !important;
+    --colorPulse: #FFC56D;
+}
+.colorRed{
+    background-color: #DA153B !important;
+    box-shadow: 0 0 0 #DC5F89 !important;
+    --colorPulse: #DC5F89;
+}
+.colorBlue{
+    background-color: #107BFD !important;
+    box-shadow: 0 0 0 #66BFFF !important;
+    --colorPulse: #66BFFF;
+}
+.colorGreen{
+    background-color: #24A647 !important;
+    box-shadow: 0 0 0 #59A863 !important;
+    --colorPulse: #59A863;
+}
+
+.pulse {
+    display: block;
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+.pulse:hover {
+    animation: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 var(--colorPulse);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 var(--colorPulse);
+        box-shadow: 0 0 0 0 var(--colorPulse);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}

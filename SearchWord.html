@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="SWStyle.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body style="background-color: #E9ECEC;"><!--#F3DAD3;">-->
+    <form id="submitForm">
+        <label class="labelAlign">
+            <div class="Animation"><h1  class="fontSize">Word Search</h1></div>
+        </label>
+
+        <div class="shadow-lg p-3 mb-5 rounded container alert alert-dark d-flex justify-content-center">
+            <div class="input-group">
+                    <input id="searchWord" autofocus type="text" required class="form-control" style="text-align: center;" aria-label="Text input with segmented dropdown button">
+                    <div class="input-group-append">
+                        <button id="Search" type="submit" class="btn btn-light">Search</button>
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <button id="Yellow" type="button" class="btn btn-warning btn-circle btn-lg"><i class="glyphicon glyphicon-remove"></i></button>
+
+                            <button id="Red" type="button" autofocus class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-heart"></i></button>
+
+                            <button id="Blue" type="button" class="btn btn-primary btn-circle btn-lg"><i class="glyphicon glyphicon-list"></i></button>
+                            <button id="Green" type="button" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-link"></i></button>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a class="dropdown-item" id="_Clear" href="#">Clear</a>
+                        </div>
+                        <span id="spanPulse" class="pulse colorRed"></span>
+                    </div>
+             </div>
+        </div>
+
+        <fieldset>
+            <br>
+            <div class="shadow-lg p-3 mb-5 rounded">
+                <input required id="fullCompliance" class="radio-input" type="radio" name="mySearchMode" value="mySearchMode1" />
+                <label for="fullCompliance" class="radio-label">Full compliance</label>
+                <input required id="partialCompliance" class="radio-input" type="radio" name="mySearchMode" value="mySearchMode2" />
+                <label for="partialCompliance" class="radio-label">Partial compliance</label>
+            </div>
+        </fieldset>
+
+        <div id="divText" class="shadow-lg w-auto p-3 container">
+            <div aria-required="true" id="basicText" class="w-auto p-3" aria-label="Your text" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel sapien in enim bibendum maximus eget sed leo. Ut placerat dolor dui. Sed neque massa, volutpat in efficitur non, semper eget libero. Aliquam volutpat iaculis urna, et iaculis ex auctor non. Proin congue vel sapien non porta. Phasellus ut tortor ac elit faucibus tristique. Proin eget cursus ex, eget vulputate ligula. Sed vehicula nulla id risus consectetur, sit amet ornare dolor suscipit. Sed auctor placerat massa id hendrerit. Vivamus efficitur enim eu erat aliquam, sed commodo magna porttitor. Suspendisse vitae viverra elit, feugiat scelerisque metus.
+
+                Proin nec dignissim nisi. Nulla et sapien efficitur, convallis odio ut, placerat est. Donec accumsan aliquam enim sit amet porta. Sed gravida nisl neque, et molestie tellus pretium vel. In at laoreet libero, vel sodales erat. Mauris ultrices lacus et felis vestibulum, non efficitur lacus ornare. Pellentesque sed augue a lacus volutpat tincidunt quis et ligula. Nunc luctus luctus mi, tincidunt venenatis velit lobortis eu. Nunc eget risus eros. Duis mollis lacinia turpis nec vulputate. Suspendisse vitae metus ante. Pellentesque at erat dapibus, ullamcorper neque egestas, cursus felis. Donec tempor nunc in augue venenatis mollis.
+
+                Mauris hendrerit volutpat vehicula. Vestibulum non leo sed ex consectetur hendrerit. Phasellus nisl nulla, ultricies in elementum et, facilisis a ligula. Pellentesque sit amet magna diam. Suspendisse id tincidunt magna, eu molestie justo. Morbi convallis nisi tincidunt ex tempus, quis luctus lacus fermentum. Nam viverra maximus arcu, ultrices malesuada nibh faucibus vitae. Ut id consectetur sapien. Nam nec ligula ac nibh tempor mollis nec vel elit. Fusce ac felis erat. Morbi quis erat volutpat arcu efficitur pretium eget vel nibh. Praesent vel odio in risus tempor sagittis. Curabitur fringilla auctor faucibus. Nam interdum molestie massa faucibus ullamcorper. Aliquam mauris orci, tincidunt eget pretium quis, scelerisque ut elit. Quisque non interdum nunc, nec pretium turpis.
+
+                In volutpat auctor ligula, sit amet hendrerit ante semper nec. Morbi dictum arcu vitae aliquet faucibus. Sed luctus dignissim felis ullamcorper varius. Nam urna dui, scelerisque a arcu vitae, blandit iaculis purus. Morbi id odio sed tellus aliquam condimentum quis ut turpis. Sed mattis nibh non imperdiet efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ut odio eget felis ultricies convallis eget in leo. Cras eget ipsum porttitor, aliquet purus a, molestie nulla. In id eros a est tempus vestibulum in sed mauris.
+
+                Phasellus id viverra mi. Integer cursus, mi ultrices tempor aliquet, nulla elit ultricies nunc, at pharetra dui turpis sed est. Nullam dictum laoreet sagittis. Vestibulum non metus luctus, laoreet metus a, bibendum ante. Maecenas tempus hendrerit neque, in auctor dui. Aliquam scelerisque pulvinar ullamcorper. Nulla vitae nisi consequat, imperdiet urna eget, efficitur ex. Integer ac congue massa. Sed vitae eleifend enim. Phasellus lacinia ante varius, cursus dui vitae, laoreet nibh. Donec sollicitudin, neque ut tempor tempor, quam eros vulputate lorem, vel ultrices eros justo ornare tellus. Sed posuere lectus at sagittis feugiat. Cras laoreet mi sit amet turpis aliquam pulvinar. Phasellus tempor ligula eget tellus congue congue. Nunc imperdiet accumsan quam, vel ultricies libero varius eget. </div>
+        </div>
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="SW_JS_Engine.js"></script>
+</body>
+</html>
